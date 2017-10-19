@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"
+      id="cordova-plugin-tiles"
+      version="1.0.0">
+    <name>Windows Tiles</name>
+    <description>Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP).</description>
+	<author>Andrés Zsögön</author>
+    <license>MIT</license>
+    <keywords>cordova,tiles,livetiles</keywords>
+    <repo>https://github.com/andreszs/cordova-plugin-tiles.git</repo>
+	<issue>https://github.com/andreszs/cordova-plugin-tiles/issues</issue>
+
+    <js-module src="www/TilesPlugin.js" name="Tiles">
+        <clobbers target="Tiles" />
+    </js-module>
+
+    <!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/TilesPluginProxy.js" name="TilesPluginProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
+</plugin>

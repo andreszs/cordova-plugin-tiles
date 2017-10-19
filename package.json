@@ -1,0 +1,36 @@
+{
+  "name": "cordova-plugin-tiles",
+  "version": "1.0.0",
+  "description": "Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP).",
+  "cordova": {
+    "id": "cordova-plugin-tiles",
+    "platforms": [
+      "windows"
+    ]
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=5.0.0"
+    }
+  ],
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-windows",
+    "cordova",
+    "phonegap",
+    "livetiles",
+    "tiles",
+    "plugin"
+  ],
+  "author": "Andres Zsogon",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreszs/cordova-plugin-tiles"
+  },
+  "bugs": {
+    "url": "https://github.com/andreszs/cordova-plugin-tiles/issues"
+  },
+  "homepage": "https://github.com/andreszs/cordova-plugin-tiles"
+}
