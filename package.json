@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-tiles",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP).",
   "cordova": {
     "id": "cordova-plugin-tiles",
