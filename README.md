@@ -26,6 +26,7 @@ Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP). Co
 
 ## Supported Platforms
 - Windows Universal
+- Browser
 
 ## Compatibility
 - [x] Windows 10
@@ -269,6 +270,9 @@ The tile's background color is determined by the `BackgroundColor` preference na
 
 #### :small_blue_diamond: Does the plugin require the Notifications Extensions library?
 No, the plugin does not depend on the [Notifications Extensions](https://github.com/WindowsNotifications/NotificationsExtensions) because they are aimed to Windows 10 only. This plugins fully supports the Windows Phone 8 devices family.
+
+#### :small_blue_diamond: How does the plugin integrate with the Browser platform?
+The plugin running in the Browser platform will simply output console commands showing what method was invoked.
 
 #### :small_blue_diamond: Does the plugin work in Windows Phone 7?
 This plugin is for the *Universal Windows platform*. For Windows Phone 7 support, you can use the deprecated *Windows Phone platform* and the [com.kolwit.updatelivetile
