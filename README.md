@@ -1,6 +1,6 @@
-| License | Platform | Travis CI | Snyk | Contribute |
+| License | Platform | AppVeyor | Snyk | Contribute |
 | --- | --- | --- | --- | --- |
-| ![License](https://img.shields.io/badge/license-MIT-orange.svg) | ![Platform](https://img.shields.io/badge/platform-windows-blue.svg) | [![Build Status](https://travis-ci.org/andreszs/cordova-plugin-tiles.svg?branch=master)](https://travis-ci.org/andreszs/cordova-plugin-tiles) | [![Known Vulnerabilities](https://snyk.io/test/github/andreszs/cordova-plugin-tiles/badge.svg)](https://snyk.io/test/github/andreszs/cordova-plugin-tiles) | [![Donate](https://img.shields.io/badge/donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G33QACCVKYD7U) |
+| ![License](https://img.shields.io/badge/license-MIT-orange.svg) | ![Platform](https://img.shields.io/badge/platform-windows-blue.svg) | [![Build status](https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-battery-status?branch=master)](https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-battery-status) | [![Known Vulnerabilities](https://snyk.io/test/github/andreszs/cordova-plugin-tiles/badge.svg)](https://snyk.io/test/github/andreszs/cordova-plugin-tiles) | [![Donate](https://img.shields.io/badge/donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G33QACCVKYD7U) |
 
 # cordova-plugin-tiles
 Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP). Compatible with Windows 10, Windows 10 Mobile, Windows Phone 8.1 and Windows Phone 8.
