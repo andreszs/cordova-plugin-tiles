@@ -63,9 +63,7 @@ Updates a tile from the preset of primary tiles provided by the plugin. This is 
 | tilePreset | <code>[tilePreset](#tilepreset)</code> | Predefined tile schema to use |
 | tileContent | <code>[tileContent](#tilecontent)</code> | Tile contents (text and/or images) |
 
-```javascript
-Tiles.updateTilePreset(successCallback, errorCallback, tilePreset, tileContent)
-```
+Refer to the <code>[tilePreset](#tilepreset)</code> and <code>[tileContent](#tilecontent)</code> sections for information regarding these arguments. Your `tileContent` argument must be an array with the required options according to the selected `tilePreset`.
 
 <a id="updatetilexml"></a>
 #### :small_orange_diamond: Tiles.updateTileXml(successCallback, errorCallback, tileXml)
