@@ -3,6 +3,7 @@
 | ![License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square) | ![Platform](https://img.shields.io/badge/platform-windows-blue.svg?style=flat-square) | [![Build status](https://ci.appveyor.com/api/projects/status/github/andreszs/cordova-plugin-tiles?branch=master&svg=true)](https://ci.appveyor.com/project/andreszs/cordova-plugin-tiles) | [![Known Vulnerabilities](https://snyk.io/test/github/andreszs/cordova-plugin-tiles/badge.svg?style=flat-square)](https://snyk.io/test/github/andreszs/cordova-plugin-tiles) | [![Donate](https://img.shields.io/badge/donate-PayPal-green.svg?style=flat-square)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G33QACCVKYD7U) |
 
 # cordova-plugin-tiles
+
 Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP). Compatible with Windows 10, Windows 10 Mobile, Windows Phone 8.1 and Windows Phone 8.
 
 ## Table of Contents
@@ -25,23 +26,28 @@ Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP). Co
 + [FAQ](#faq)
 
 ## Supported Platforms
+
 - Windows Universal
 - Browser
 
 ## Compatibility
+
 - [x] Windows 10
 - [x] Windows 10 Mobile
 - [x] Windows Phone 8.1
 - [x] Windows Phone 8
 
 ## Installation
-This requires Cordova 5.0+
 
-    cordova plugin add cordova-plugin-tiles
+#### Latest stable release
 
-It is also possible to install via repo URL directly (master, unstable)
+* Cordova: `cordova plugin add cordova-plugin-tiles`
+* PhoneGap: `phonegap local plugin add cordova-plugin-tiles`
 
-    cordova plugin add https://github.com/andreszs/cordova-plugin-tiles.git
+#### Current state from git
+
+* Cordova: `cordova plugin add https://github.com/andreszs/cordova-plugin-tiles`
+* PhoneGap: `phonegap local plugin add https://github.com/andreszs/cordova-plugin-tiles`
 
 ## Methods
 
@@ -228,7 +234,7 @@ Tiles.updateTilePreset(tileSuccess, tileError, Tiles.tileType.TileSquarePeekImag
 
 Your images for tile updates must be under 200KB and 1024 pixels resolution.
 
-> For tile updates, these can come either from the app package, local app data, or the web, using ms-appx:///, ms-appdata:///local, and http[s]:// URIs. These URIs are simply assigned to the src attributes of image elements within the XML tile templates. Note again that the first two URIs typically have three slashes at the beginning to denote "the current app"; http:// URIs also require that the Internet (Client) capability be declared in the app’s manifest.
+> For tile updates, these can come either from the app package, local app data, or the web, using ms-appx:///, ms-appdata:///local, and http[s]:// URIs. These URIs are simply assigned to the src attributes of image elements within the XML tile templates. Note again that the first two URIs typically have three slashes at the beginning to denote "the current app"; http:// URIs also require that the Internet (Client) capability be declared in the appï¿½s manifest.
 
 The above information was taken from the free eBook [*Programming Windows Store Apps with HTML, CSS and JavaScript*](https://mva.microsoft.com/ebooks) by Microsoft Press and is &copy; of their respective owners.
 
