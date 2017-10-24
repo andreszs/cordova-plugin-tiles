@@ -1,6 +1,6 @@
 | License | Platform | AppVeyor | Snyk | Contribute |
 | --- | --- | --- | --- | --- |
-| ![License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square) | ![Platform](https://img.shields.io/badge/platform-windows-blue.svg?style=flat-square) | [![Build status](https://ci.appveyor.com/api/projects/status/github/andreszs/cordova-plugin-tiles?branch=master&svg=true)](https://ci.appveyor.com/project/andreszs/cordova-plugin-tiles) | [![Known Vulnerabilities](https://snyk.io/test/github/andreszs/cordova-plugin-tiles/badge.svg?style=flat-square)](https://snyk.io/test/github/andreszs/cordova-plugin-tiles) | [![Donate](https://img.shields.io/badge/donate-PayPal-green.svg?style=flat-square)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G33QACCVKYD7U) |
+| ![License](https://img.shields.io/badge/license-MIT-orange.svg) | ![Platform](https://img.shields.io/badge/platform-windows-blue.svg) | [![Build status](https://ci.appveyor.com/api/projects/status/github/andreszs/cordova-plugin-tiles?branch=master&svg=true)](https://ci.appveyor.com/project/andreszs/cordova-plugin-tiles) | [![Known Vulnerabilities](https://snyk.io/test/github/andreszs/cordova-plugin-tiles/badge.svg)](https://snyk.io/test/github/andreszs/cordova-plugin-tiles) | [![Donate](https://img.shields.io/badge/donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G33QACCVKYD7U) |
 
 # cordova-plugin-tiles
 
@@ -23,6 +23,7 @@ Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP). Co
   - [TileSquarePeekImageAndText02](#tiles.tiletype.tilesquarepeekimageandtext02)
   - [TileSquarePeekImageAndText04](#tiles.tiletype.tilesquarepeekimageandtext04)
 + [Image Tiles](#image-tiles)
++ [Sample App](#sample-app)
 + [FAQ](#faq)
 
 ## Supported Platforms
@@ -78,7 +79,7 @@ Updates a tile using your custom `tileXml` schema.
 
 This method allows you to create any type of tile, including [adaptive tiles](https://docs.microsoft.com/en-us/windows/uwp/controls-and-patterns/tiles-and-notifications-create-adaptive-tiles) which are cool but require Windows 10. With this method you could create peek tiles such as this:
 
-![Adaptive Tiles Sample](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/adaptive_tile_xml.png)
+![Adaptive Tiles Sample](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/adaptive_tile_xml.png)
 
 - To view all tile templates available, see the [MSDN Tile Template Catalog](https://msdn.microsoft.com/library/windows/apps/hh761491), where XML sample code is included.
 - To create XML adaptive tiles for Windows 10, use the [Notifications Visualizer](https://www.microsoft.com/en-us/store/p/notifications-visualizer/9nblggh5xsl1) app.
@@ -142,8 +143,8 @@ Tiles.updateTilePreset(tileSuccess, tileError, Tiles.tileType.TileSquareBlock, t
 
 | OS | Square Tile | Wide Tile |
 | --- | --- | --- |
-| Windows 10 | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareBlock_square.png) | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareBlock_wide.png) |
-| Windows Phone 8.1 | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareBlock_square.png) | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareBlock_wide.png) |
+| Windows 10 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareBlock_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareBlock_wide.png) |
+| Windows Phone 8.1 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareBlock_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareBlock_wide.png) |
 
 **Windows Phone 8.1 remarks**: The wide-sized tile has a inconsistency between Windows 10 and WP 8.1. To ensure the tile is correctly displayed in Windows 10, this plugin will reorder the tile values internally. The result is that the tile shows values correctly in Windows 10, but scrambled in Windows Phone 8.1. Avoid using this tile type in WP8.1 devices.
 
@@ -159,8 +160,8 @@ Tiles.updateTilePreset(tileSuccess, tileError, Tiles.tileType.TileSquareText02, 
 
 | OS | Square Tile | Wide Tile |
 | --- | --- | --- |
-| Windows 10 | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareText02_square.png) | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareText02_wide.png) |
-| Windows Phone 8.1 | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareText02_square.png) | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareText02_wide.png) |
+| Windows 10 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareText02_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareText02_wide.png) |
+| Windows Phone 8.1 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText02_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText02_wide.png) |
 
 <a id="tiles.tiletype.tilesquaretext04"></a>
 ### :small_blue_diamond: Tiles.tileType.TileSquareText04
@@ -173,8 +174,8 @@ Tiles.updateTilePreset(tileSuccess, tileError, Tiles.tileType.TileSquareText04, 
 
 | OS | Square Tile | Wide Tile |
 | --- | --- | --- |
-| Windows 10 | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareText04_square.png) | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareText04_wide.png) |
-| Windows Phone 8.1 | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareText04_square.png) | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareText04_wide.png) |
+| Windows 10 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareText04_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareText04_wide.png) |
+| Windows Phone 8.1 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText04_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText04_wide.png) |
 
 <a id="tiles.tiletype.tilesquareimage"></a>
 ### :small_blue_diamond: Tiles.tileType.TileSquareImage
@@ -189,8 +190,8 @@ Tiles.updateTilePreset(tileSuccess, tileError, Tiles.tileType.TileSquareImage, t
 
 | OS | Square Tile | Wide Tile |
 | --- | --- | --- |
-| Windows 10 | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareImage_square.png) | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareImage_wide.png) |
-| Windows Phone 8.1 | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareImage_square.png) | ![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareImage_wide.png) |
+| Windows 10 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareImage_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareImage_wide.png) |
+| Windows Phone 8.1 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareImage_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareImage_wide.png) |
 
 <a id="tiles.tiletype.tilesquarepeekimageandtext02"></a>
 ### :small_blue_diamond: Tiles.tileType.TileSquarePeekImageAndText02
@@ -208,8 +209,8 @@ Tiles.updateTilePreset(tileSuccess, tileError, Tiles.tileType.TileSquarePeekImag
 
 | OS | Square Tile | Wide Tile |
 | --- | --- | --- |
-| Windows 10 | Front<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareImage_square.png)<br/>Back<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareText02_square.png) | Front<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareImage_wide.png)<br/>Back<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareText02_wide.png) |
-| Windows Phone 8.1 | Front<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareImage_square.png)<br/>Back<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareText02_square.png) | Front<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareImage_wide.png)<br/>Back<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareText02_wide.png) |
+| Windows 10 | Front<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareImage_square.png)<br/>Back<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareText02_square.png) | Front<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareImage_wide.png)<br/>Back<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareText02_wide.png) |
+| Windows Phone 8.1 | Front<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareImage_square.png)<br/>Back<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText02_square.png) | Front<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareImage_wide.png)<br/>Back<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText02_wide.png) |
 
 <a id="tiles.tiletype.tilesquarepeekimageandtext04"></a>
 ### :small_blue_diamond: Tiles.tileType.TileSquarePeekImageAndText04
@@ -225,8 +226,8 @@ Tiles.updateTilePreset(tileSuccess, tileError, Tiles.tileType.TileSquarePeekImag
 
 | OS | Square Tile | Wide Tile |
 | --- | --- | --- |
-| Windows 10 | Front<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareImage_square.png)<br/>Back<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareText04_square.png) | Front<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareImage_wide.png)<br/>Back<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windows10/TileSquareText04_wide.png) |
-| Windows Phone 8.1 | Front<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareImage_square.png)<br/>Back<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareText04_square.png) | Front<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareImage_wide.png)<br/>Back<br/>![tile](https://github.com/andreszs/cordova-plugin-tiles/blob/master/images/windowsphone81/TileSquareText04_wide.png) |
+| Windows 10 | Front<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareImage_square.png)<br/>Back<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareText04_square.png) | Front<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareImage_wide.png)<br/>Back<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareText04_wide.png) |
+| Windows Phone 8.1 | Front<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareImage_square.png)<br/>Back<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText04_square.png) | Front<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareImage_wide.png)<br/>Back<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText04_wide.png) |
 
 ## Image Tiles
 
@@ -257,6 +258,17 @@ To create a flip tile with the regular app's icon on one side, simply use one of
 var src1 = 'ms-appx:///images/Square150x150Logo.scale-100.png'; /* square tile icon */
 var src2 = 'ms-appx:///images/SplashScreen.scale-100.png'; /* wide tile icon */
 ```
+
+## Sample App
+
+You can view the tiles plugin in action with the [Tiles Plugin Sample app](https://www.microsoft.com/store/apps/9nkz4fzh6bfq) which you can get from the store right now. The app also allows you to create and test your custom XML tile schemas easily.
+
+![https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/tiles_plugin_sample_app_1.png](Windows Live Tiles Plugin Sample App)
+![https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/tiles_plugin_sample_app_2.png](Windows Live Tiles Plugin Sample App)
+
+The app is compatible with:
+
+> Windows 10, Windows 8.1, Windows 10 Mobile, Windows Phone 8.1
 
 ## FAQ
 
