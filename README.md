@@ -263,8 +263,7 @@ var src2 = 'ms-appx:///images/SplashScreen.scale-100.png'; /* wide tile icon */
 
 You can view the tiles plugin in action with the [Tiles Plugin Sample app](https://www.microsoft.com/store/apps/9nkz4fzh6bfq) which you can get from the store right now. The app also allows you to create and test your custom XML tile schemas easily.
 
-![https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/tiles_plugin_sample_app_1.png](Windows Live Tiles Plugin Sample App)
-![https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/tiles_plugin_sample_app_2.png](Windows Live Tiles Plugin Sample App)
+![Windows Live Tiles Plugin Sample App](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/tiles_plugin_sample_app_1.png) ![Windows Live Tiles Plugin Sample App](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/tiles_plugin_sample_app_2.png)
 
 The app is compatible with:
 
