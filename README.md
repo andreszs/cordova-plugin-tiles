@@ -1,6 +1,4 @@
-| License | Platform | AppVeyor | Snyk | Contribute |
-| --- | --- | --- | --- | --- |
-| ![License](https://img.shields.io/badge/license-MIT-orange.svg) | ![Platform](https://img.shields.io/badge/platform-windows-blue.svg) | [![Build status](https://ci.appveyor.com/api/projects/status/github/andreszs/cordova-plugin-tiles?branch=master&svg=true)](https://ci.appveyor.com/project/andreszs/cordova-plugin-tiles) | [![Known Vulnerabilities](https://snyk.io/test/github/andreszs/cordova-plugin-tiles/badge.svg)](https://snyk.io/test/github/andreszs/cordova-plugin-tiles) | [![Donate](https://img.shields.io/badge/donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G33QACCVKYD7U) |
+![npm](https://img.shields.io/npm/dt/cordova-plugin-tiles) ![npm](https://img.shields.io/npm/v/cordova-plugin-tiles) ![GitHub package.json version](https://img.shields.io/github/package-json/v/andreszs/cordova-plugin-tiles?color=FF6D00&label=master&logo=github) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/andreszs/cordova-plugin-tiles) ![GitHub top language](https://img.shields.io/github/languages/top/andreszs/cordova-plugin-tiles) ![GitHub](https://img.shields.io/github/license/andreszs/cordova-plugin-tiles) ![GitHub last commit](https://img.shields.io/github/last-commit/andreszs/cordova-plugin-tiles)
 
 # cordova-plugin-tiles
 
