@@ -2,7 +2,7 @@
 
 # cordova-plugin-tiles
 
-Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP). Compatible with Windows 10, Windows 10 Mobile, Windows Phone 8.1 and Windows Phone 8.
+Windows Tiles plugin for Apache Cordova's Windows Universal Platform (UWP).
 
 ## Table of Contents
 
