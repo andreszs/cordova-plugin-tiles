@@ -88,10 +88,10 @@ Updates a tile using your custom `tileXml` schema.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| successCallback | <code>Function</code> | Function to call on success  |
-| errorCallback | <code>Function</code> | Function to call on failure  |
-| tileXml | <code>String</code> | A plain text XML tile.  |
-| tileTag | <code>String</code> | A string of no more than 16 alphanumeric characters to identify notification in the [queue](https://learn.microsoft.com/en-us/previous-versions/windows/apps/hh868234(v=win.10).  |
+| successCallback | <code>Function</code> | Function to call on success. |
+| errorCallback | <code>Function</code> | Function to call on failure. |
+| tileXml | <code>String</code> | A plain text XML tile. |
+| tileTag | <code>String</code> | A string of no more than 16 alphanumeric characters to identify notification in the queue. |
 
 This method allows you to create any type of tile, including [adaptive tiles](https://docs.microsoft.com/en-us/windows/uwp/controls-and-patterns/tiles-and-notifications-create-adaptive-tiles) which require Windows 10. With this method you could create peek tiles such as this:
 
