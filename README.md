@@ -61,7 +61,7 @@ Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP). Co
 <a id="enableNotificationQueue"></a>
 #### :small_orange_diamond: cordova.plugins.Tiles.enableNotificationQueue(successCallback, errorCallback)
 
-Enables the tile [notification queue](https://learn.microsoft.com/en-us/previous-versions/windows/apps/hh781199(v=win.10).
+Enables the tile [notification queue](https://learn.microsoft.com/en-us/previous-versions/windows/apps/hh781199(v=win.10)).
 
 Use of the notification queue allows a tile to display a rotation of up to five notifications. By default, a tile on the Start screen displays the content of a single notification until a new notification replaces the current notification. With notification queuing enabled, up to five notifications are maintained in the queue and the tile cycles through them. The notification queue can be used with all notification delivery types: local, scheduled, periodic, or push.
 
