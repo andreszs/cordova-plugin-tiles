@@ -1,7 +1,7 @@
 var Tiles = {
 
-	updateTileXml: function (successCallback, errorCallback, tileXml) {
-        cordova.exec(successCallback, errorCallback, "Tiles", "updateTileXml", [tileXml]);
+	updateTileXml: function (successCallback, errorCallback, tileXml, tileTag) {
+        cordova.exec(successCallback, errorCallback, "Tiles", "updateTileXml", [tileXml, tileTag]);
     },
 
     updateTilePreset: function (successCallback, errorCallback, tileType, tileContent) {
@@ -10,6 +10,10 @@ var Tiles = {
 
 	clearTile: function (successCallback, errorCallback) {
 		cordova.exec(successCallback, errorCallback, "Tiles", "clearTile", null);
+	},
+
+    enableNotificationQueue: function (successCallback, errorCallback) {
+		cordova.exec(successCallback, errorCallback, "Tiles", "enableNotificationQueue", null);
 	},
 
 	tileType: {

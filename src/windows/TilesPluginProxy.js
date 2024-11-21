@@ -11,6 +11,7 @@ module.exports = {
 		var notifications = Windows.UI.Notifications;
 		var tileDom = Windows.Data.Xml.Dom.XmlDocument();
 		var tileXml = args[0];
+        var tileTag = args[1];
 
 		// Load an XML document using the supplied string. The document is parsed using the default parser settings.
 		try {
@@ -22,6 +23,9 @@ module.exports = {
 
 		// Create the notification from the XML DOM.
 		var tileNotification = new notifications.TileNotification(tileDom);
+        if (typeof(tileTag) !== 'undefined') {
+            tileNotification.Tag = tileTag;
+        }
 
 		// Apply a change in content or appearance to the tile.
 		try {
@@ -57,7 +61,7 @@ module.exports = {
 					errorCallback('Error: TileSquareBlock expects 2 or 3 strings in the tileContent argument array');
 					return;
 				}
-				var tileXml = '<tile><visual version="2">'+
+				var tileXml = '<tile><visual branding="name" version="2">' +
 					'<binding template="TileSquare150x150Block" fallback="TileSquareBlock">'+
 						'<text id="1">'+tileContent[0]+'</text>'+
 						'<text id="2">'+tileContent[1]+'</text>'+
@@ -76,7 +80,7 @@ module.exports = {
 					errorCallback('Error: TileSquareText02 expects 2 strings in the tileContent argument array');
 					return;
 				}
-				var tileXml = '<tile><visual version="2">'+
+				var tileXml = '<tile><visual branding="name" version="2">' +
 					'<binding template="TileSquare150x150Text02" fallback="TileSquareText02">'+
 						'<text id="1">'+tileContent[0]+'</text>'+
 						'<text id="2">'+tileContent[1]+'</text>'+
@@ -93,7 +97,7 @@ module.exports = {
 					errorCallback('Error: TileSquareText04 expects 1 string in the tileContent argument array');
 					return;
 				}
-				var tileXml = '<tile><visual version="2">'+
+				var tileXml = '<tile><visual branding="name" version="2">' +
 					'<binding template="TileSquare150x150Text04" fallback="TileSquareText04">'+
 						'<text id="1">'+tileContent[0]+'</text>'+
 					'</binding>'+
@@ -108,7 +112,7 @@ module.exports = {
 					errorCallback('Error: TileSquareImage expects 3 strings in the tileContent argument array');
 					return;
 				}
-				var tileXml = '<tile><visual version="2">'+
+				var tileXml = '<tile><visual branding="name" version="2">' +
 					'<binding template="TileSquare150x150Image" fallback="TileSquareImage">'+
 						'<image id="1" src="'+tileContent[0]+'" alt="'+tileContent[2]+'"/>'+
 					'</binding>'+
@@ -123,7 +127,7 @@ module.exports = {
 					errorCallback('Error: TileSquarePeekImageAndText02 expects 5 or 6 strings in the tileContent argument array');
 					return;
 				}
-				var tileXml = '<tile><visual version="2">'+
+				var tileXml = '<tile><visual branding="name" version="2">' +
 					'<binding template="TileSquare150x150PeekImageAndText02" fallback="TileSquarePeekImageAndText02">'+
 						'<image id="1" src="'+tileContent[0]+'" alt="'+tileContent[2]+'"/>'+
 						'<text id="1">'+tileContent[3]+'</text>'+
@@ -143,7 +147,7 @@ module.exports = {
 					errorCallback('Error: TileSquarePeekImageAndText04 expects 4 strings in the tileContent argument array');
 					return;
 				}
-				var tileXml = '<tile><visual version="2">'+
+				var tileXml = '<tile><visual branding="name" version="2">' +
 					'<binding template="TileSquare150x150PeekImageAndText04" fallback="TileSquarePeekImageAndText04">'+
 						'<image id="1" src="'+tileContent[0]+'" alt="'+tileContent[2]+'"/>'+
 						'<text id="1">'+tileContent[3]+'</text>'+
@@ -165,13 +169,6 @@ module.exports = {
 		} catch(e) {
 			errorCallback('XML parsing error: ' + e.message);
 			return;
-		}
-
-		// Clear the tile first, just in case
-		try {
-			notifications.TileUpdateManager.createTileUpdaterForApplication().clear();
-		} catch(e) {
-			errorCallback('Error clearing tile: '+e.message);
 		}
 
 		// Create the notification from the XML DOM.
@@ -200,7 +197,20 @@ module.exports = {
 			errorCallback(e.message);
 		}
 
-	}
+	},
+
+    /* Enable the notification queue */
+    enableNotificationQueue: function(successCallback, errorCallback){
+
+        var notifications = Windows.UI.Notifications;
+        try {
+            notifications.TileUpdateManager.createTileUpdaterForApplication().enableNotificationQueue(true);
+            successCallback('Notification queue enabled OK');
+        } catch (e) {
+            errorCallback('Failed to change notification queue state: ' + e.message);
+        }
+
+    }
 
 };
 

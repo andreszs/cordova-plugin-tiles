@@ -10,9 +10,10 @@ Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP). Co
 + [Compatibility](#compatibility)
 + [Installation](#installation)
 + [Methods](#methods)
-  - [Tiles.updateTilePreset](#updatetilepreset)
-  - [Tiles.updateTileXml](#updatetilexml)
-  - [Tiles.clearTile](#cleartile)
+  - [enableNotificationQueue](#enableNotificationQueue)
+  - [updateTilePreset](#updatetilepreset)
+  - [updateTileXml](#updatetilexml)
+  - [clearTile](#cleartile)
 + [Tile Showcase](#tile-showcase)
   - [TileSquareBlock](#tiles.tiletype.tilesquareblock)
   - [TileSquareText02](#tiles.tiletype.tilesquaretext02)
@@ -27,7 +28,7 @@ Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP). Co
 ## Supported Platforms
 
 - Windows Universal
-- Browser
+- Browser (filler platform only)
 
 ## Compatibility
 
@@ -38,10 +39,17 @@ Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP). Co
 
 ## Installation
 
-#### Latest stable release
+### Install latest version from NPM
 
-* Cordova: `cordova plugin add cordova-plugin-tiles`
-* PhoneGap: `phonegap local plugin add cordova-plugin-tiles`
+```bash
+  cordova plugin add cordova-plugin-tiles
+```
+
+### Install latest version from master
+
+```bash
+  cordova plugin add https://github.com/andreszs/cordova-plugin-tiles
+```
 
 #### Current state from git
 
@@ -50,8 +58,17 @@ Windows Tiles plugin for Apache Cordova and Windows Universal Platform (UWP). Co
 
 ## Methods
 
+<a id="enableNotificationQueue"></a>
+#### :small_orange_diamond: cordova.plugins.Tiles.enableNotificationQueue(successCallback, errorCallback)
+
+Enables the tile [notification queue](https://learn.microsoft.com/en-us/previous-versions/windows/apps/hh781199(v=win.10).
+
+Use of the notification queue allows a tile to display a rotation of up to five notifications. By default, a tile on the Start screen displays the content of a single notification until a new notification replaces the current notification. With notification queuing enabled, up to five notifications are maintained in the queue and the tile cycles through them. The notification queue can be used with all notification delivery types: local, scheduled, periodic, or push.
+
+When queuing is enabled, a maximum of five tile notifications can automatically cycle on the tile. By default, the replacement policy for notifications in the queue is first in, first out (FIFO); when the queue is full and a new notification arrives, the oldest notification is removed. Note that the notification display order does not follow a strict linear pattern. Users can see the notifications in a different order than they arrived in.
+
 <a id="updatetilepreset"></a>
-#### :small_orange_diamond: Tiles.updateTilePreset(successCallback, errorCallback, tilePreset, tileContent)
+#### :small_orange_diamond: cordova.plugins.Tiles.updateTilePreset(successCallback, errorCallback, tilePreset, tileContent)
 
 Updates a tile from the preset of primary tiles provided by the plugin. This is the recommended and most compatible option, as it will ensure the tile is shown. Only presets compatible with all devices are available.
 
@@ -65,7 +82,7 @@ Updates a tile from the preset of primary tiles provided by the plugin. This is 
 Refer to the <code>[tilePreset](#tilepreset)</code> and <code>[tileContent](#tilecontent)</code> sections for information regarding these arguments. Your `tileContent` argument must be an array with the required options according to the selected `tilePreset`.
 
 <a id="updatetilexml"></a>
-#### :small_orange_diamond: Tiles.updateTileXml(successCallback, errorCallback, tileXml)
+#### :small_orange_diamond: cordova.plugins.Tiles.updateTileXml(successCallback, errorCallback, tileXml, tileTag)
 
 Updates a tile using your custom `tileXml` schema.
 
@@ -74,16 +91,20 @@ Updates a tile using your custom `tileXml` schema.
 | successCallback | <code>Function</code> | Function to call on success  |
 | errorCallback | <code>Function</code> | Function to call on failure  |
 | tileXml | <code>String</code> | A plain text XML tile.  |
+| tileTag | <code>String</code> | A string of no more than 16 alphanumeric characters to identify notification in the [queue](https://learn.microsoft.com/en-us/previous-versions/windows/apps/hh868234(v=win.10).  |
 
-This method allows you to create any type of tile, including [adaptive tiles](https://docs.microsoft.com/en-us/windows/uwp/controls-and-patterns/tiles-and-notifications-create-adaptive-tiles) which are cool but require Windows 10. With this method you could create peek tiles such as this:
+This method allows you to create any type of tile, including [adaptive tiles](https://docs.microsoft.com/en-us/windows/uwp/controls-and-patterns/tiles-and-notifications-create-adaptive-tiles) which require Windows 10. With this method you could create peek tiles such as this:
 
 ![Adaptive Tiles Sample](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/adaptive_tile_xml.png)
 
-- To view all tile templates available, see the [MSDN Tile Template Catalog](https://msdn.microsoft.com/library/windows/apps/hh761491), where XML sample code is included.
-- To create XML adaptive tiles for Windows 10, use the [Notifications Visualizer](https://www.microsoft.com/en-us/store/p/notifications-visualizer/9nblggh5xsl1) app.
+##### Tiles reference pages:
+- [Create adaptive tiles](https://learn.microsoft.com/en-us/windows/uwp/launch-resume/create-adaptive-tiles "Create adaptive tiles")
+- [Adaptive tiles schema](https://learn.microsoft.com/en-us/windows/uwp/launch-resume/adaptive-tiles-schema "Adaptive tiles schema")
+- [Notifications Visualizer app](https://www.microsoft.com/en-us/store/p/notifications-visualizer/9nblggh5xsl1)
+- [MSDN Tile Template Catalog](https://msdn.microsoft.com/library/windows/apps/hh761491)
 
 <a id="cleartile"></a>
-#### :small_orange_diamond: Tiles.clearTile(successCallback, errorCallback)
+#### :small_orange_diamond: cordova.plugins.Tiles.clearTile(successCallback, errorCallback)
 
 Clears the primary tile back to its default appearance.
 
@@ -132,7 +153,7 @@ An array that determines the contents of the tile. Depending on the tile templat
 Here you can preview all the resulting tile presets on different devices, with examples included.
 
 <a id="tiles.tiletype.tilesquareblock"></a>
-### :small_blue_diamond: Tiles.tileType.TileSquareBlock
+### :small_blue_diamond: cordova.plugins.Tiles.tileType.TileSquareBlock
 
 ```javascript
 var tileContent = ['10', 'New', 'Wide tile sample text']; /* first argument should be a number */
@@ -142,12 +163,9 @@ Tiles.updateTilePreset(tileSuccess, tileError, Tiles.tileType.TileSquareBlock, t
 | OS | Square Tile | Wide Tile |
 | --- | --- | --- |
 | Windows 10 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareBlock_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windows10/TileSquareBlock_wide.png) |
-| Windows Phone 8.1 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareBlock_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareBlock_wide.png) |
-
-**Windows Phone 8.1 remarks**: The wide-sized tile has a inconsistency between Windows 10 and WP 8.1. To ensure the tile is correctly displayed in Windows 10, this plugin will reorder the tile values internally. The result is that the tile shows values correctly in Windows 10, but scrambled in Windows Phone 8.1. Avoid using this tile type in WP8.1 devices.
 
 <a id="tiles.tiletype.tilesquaretext02"></a>
-### :small_blue_diamond: Tiles.tileType.TileSquareText02
+### :small_blue_diamond: cordova.plugins.Tiles.tileType.TileSquareText02
 
 ```javascript
 var text1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
@@ -162,7 +180,7 @@ Tiles.updateTilePreset(tileSuccess, tileError, Tiles.tileType.TileSquareText02, 
 | Windows Phone 8.1 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText02_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText02_wide.png) |
 
 <a id="tiles.tiletype.tilesquaretext04"></a>
-### :small_blue_diamond: Tiles.tileType.TileSquareText04
+### :small_blue_diamond: cordova.plugins.Tiles.tileType.TileSquareText04
 
 ```javascript
 var text1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
@@ -176,7 +194,7 @@ Tiles.updateTilePreset(tileSuccess, tileError, Tiles.tileType.TileSquareText04, 
 | Windows Phone 8.1 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText04_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText04_wide.png) |
 
 <a id="tiles.tiletype.tilesquareimage"></a>
-### :small_blue_diamond: Tiles.tileType.TileSquareImage
+### :small_blue_diamond: cordova.plugins.Tiles.tileType.TileSquareImage
 
 ```javascript
 var src1 = 'ms-appx:///www/images/led_square.png'; /* square 150x150 image */
@@ -192,7 +210,7 @@ Tiles.updateTilePreset(tileSuccess, tileError, Tiles.tileType.TileSquareImage, t
 | Windows Phone 8.1 | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareImage_square.png) | ![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareImage_wide.png) |
 
 <a id="tiles.tiletype.tilesquarepeekimageandtext02"></a>
-### :small_blue_diamond: Tiles.tileType.TileSquarePeekImageAndText02
+### :small_blue_diamond: cordova.plugins.Tiles.tileType.TileSquarePeekImageAndText02
 
 ```javascript
 var text1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
@@ -211,7 +229,7 @@ Tiles.updateTilePreset(tileSuccess, tileError, Tiles.tileType.TileSquarePeekImag
 | Windows Phone 8.1 | Front<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareImage_square.png)<br/>Back<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText02_square.png) | Front<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareImage_wide.png)<br/>Back<br/>![tile](https://raw.githubusercontent.com/andreszs/cordova-plugin-tiles/master/images/windowsphone81/TileSquareText02_wide.png) |
 
 <a id="tiles.tiletype.tilesquarepeekimageandtext04"></a>
-### :small_blue_diamond: Tiles.tileType.TileSquarePeekImageAndText04
+### :small_blue_diamond: cordova.plugins.Tiles.tileType.TileSquarePeekImageAndText04
 
 ```javascript
 var text1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
@@ -294,10 +312,3 @@ This plugin is for the *Universal Windows platform*. For Windows Phone 7 support
 #### :small_blue_diamond: How can I report bugs or request new features?
 Please post your request or bug report with detailed info on the [Issues](https://github.com/andreszs/cordova-plugin-tiles/issues) section and I'll review it as soon as possible. Don't forget to mention what devices are you using for testing, either real or emulated, and provide screenshots when possible.
 
-#### :small_blue_diamond: How was this plugin tested?
-
-This plugin has been tested with the Tiles Plugin Sample app created with Visual Studio 2015 on the following devices:
-- [x] Windows 10.0.15063 desktop PC
-- [x] Windows 10.0.14393 Mobile (Microsoft Lumia 435)
-- [x] Windows Phone 8.10.14219 (Nokia Lumia 520)
-- [x] Windows Phone 8.1 and Windows 10 Mobile emulators provided by Visual Studio 2015
