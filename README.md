@@ -51,11 +51,6 @@ Windows Tiles plugin for Apache Cordova's Windows Universal Platform (UWP).
   cordova plugin add https://github.com/andreszs/cordova-plugin-tiles
 ```
 
-#### Current state from git
-
-* Cordova: `cordova plugin add https://github.com/andreszs/cordova-plugin-tiles`
-* PhoneGap: `phonegap local plugin add https://github.com/andreszs/cordova-plugin-tiles`
-
 ## Methods
 
 <a id="enableNotificationQueue"></a>
